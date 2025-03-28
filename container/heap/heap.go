@@ -15,6 +15,7 @@ type Heap[T any] interface {
 	Pop() T
 	Size() int
 	Empty() bool
+	All() []T
 }
 
 type heap[T any] struct {
@@ -57,6 +58,14 @@ func (h *heap[T]) Size() int {
 
 func (h *heap[T]) Empty() bool {
 	return h.Size() == 0
+}
+
+func (h *heap[T]) All() []T {
+	results := make([]T, 0, h.s.Len())
+	for _, e := range h.s.s {
+		results = append(results, e)
+	}
+	return results
 }
 
 type internalHeap[T any] struct {

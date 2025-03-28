@@ -15,6 +15,7 @@ func TestHeap(t *testing.T) {
 	hp.Push(3)
 	hp.Push(2)
 	hp.Push(5)
+	assert.Equal(t, 3, len(hp.All()))
 	assert.Equal(t, 2, hp.Pop())
 	assert.Equal(t, 3, hp.Pop())
 	assert.Equal(t, 1, hp.Size())
