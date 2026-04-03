@@ -1,6 +1,6 @@
 module github.com/wangtaoking1/go-common
 
-go 1.21
+go 1.24
 
 require github.com/stretchr/testify v1.8.4
 
